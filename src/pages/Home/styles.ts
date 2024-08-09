@@ -26,7 +26,7 @@ export const Title = styled.h2`
 
 export const Footer = styled.footer`
   height: 30vh;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   text-align: center;
   padding: 10px;
 `;

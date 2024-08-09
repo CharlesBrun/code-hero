@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import {
   CardContainer,
@@ -11,8 +11,19 @@ import {
 } from "./styles";
 import Input from "../../components/Input";
 import Card from "../../components/Card";
+import Pagination from "../../components/Pagination";
 
 function Home() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 10;
+
+  const handlePageChange = (pageNumber: number) => {
+    if (pageNumber === currentPage) {
+      return;
+    }
+    console.log(pageNumber);
+    setCurrentPage(pageNumber);
+  };
   return (
     <>
       <Header />
@@ -33,7 +44,13 @@ function Home() {
           </CardContainer>
         </Row>
       </Container>
-      <Footer />
+      <Footer>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      </Footer>
     </>
   );
 }

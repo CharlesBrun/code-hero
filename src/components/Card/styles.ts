@@ -7,6 +7,13 @@ export const CardContainer = styled.div`
   box-shadow: 0px 0px 5px #00000033;
   border-radius: 4px;
   opacity: 1;
+
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 `;
 
 export const Content = styled.div`
