@@ -31,7 +31,7 @@ export const Footer = styled.footer`
 `;
 
 export const TitleContainer = styled.div`
-  width: 100%;
+  width: 97%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,7 @@ export const TitleContainer = styled.div`
 
 export const TitleText = styled.p`
   font: normal normal normal 12px/16px PT Sans;
-  width: 50%;
+  width: 100%;
   color: #8e8e8e;
 `;
 

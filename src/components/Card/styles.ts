@@ -17,11 +17,11 @@ export const CardContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  width: 97%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 24px 0 24px 20px;
+  padding: 24px 12px 24px 20px;
   align-items: center;
 `;
 
@@ -76,4 +76,12 @@ export const EventsContainer = styled.div`
     color: #555555;
     opacity: 1;
   }
+`;
+
+export const MoreIndicator = styled.p`
+  font-size: 14px;
+  font-family: PT Sans;
+  color: #555555;
+  margin: 0;
+  padding: 0;
 `;
