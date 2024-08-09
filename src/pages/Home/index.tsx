@@ -1,6 +1,14 @@
 import React from "react";
 import Header from "../../components/Header";
-import { Container, Footer, Row, Title } from "./styles";
+import {
+  CardContainer,
+  Container,
+  Footer,
+  Row,
+  Title,
+  TitleContainer,
+  TitleText,
+} from "./styles";
 import Input from "../../components/Input";
 import Card from "../../components/Card";
 
@@ -12,7 +20,17 @@ function Home() {
         <Row>
           <Title>Busca de personagens</Title>
           <Input />
-          <Card />
+          <TitleContainer>
+            <TitleText>Personagem</TitleText>
+            <TitleText>Séries</TitleText>
+            <TitleText>Eventos</TitleText>
+          </TitleContainer>
+          <CardContainer>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </CardContainer>
         </Row>
       </Container>
       <Footer />

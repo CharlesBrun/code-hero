@@ -30,3 +30,24 @@ export const Footer = styled.footer`
   text-align: center;
   padding: 10px;
 `;
+
+export const TitleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-top: 2em;
+`;
+
+export const TitleText = styled.p`
+  font: normal normal normal 12px/16px PT Sans;
+  width: 50%;
+  color: #8e8e8e;
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+`;

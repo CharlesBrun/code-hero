@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 90%;
+  max-width: 95%;
   height: 64px;
 
   display: flex;

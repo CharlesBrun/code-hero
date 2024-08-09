@@ -2,105 +2,71 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   width: 100%;
-  background-color: #384651;
+  background-color: #ffffff;
   position: relative;
-  margin-bottom: 24px;
+  box-shadow: 0px 0px 5px #00000033;
+  border-radius: 4px;
+  opacity: 1;
 `;
 
 export const Content = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 12px;
-`;
-
-export const UserInfo = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 12px;
-
-  div {
-    margin-left: 12px;
-  }
-
-  h4 {
-    font-family: "Open Sans";
-    front-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-    color: #ffffff;
-  }
-
-  p {
-    font-family: "Open Sans";
-    front-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #ffffff;
-  }
-`;
-
-export const UserPicture = styled.img`
-    width: 32px;
-    height: 32px;
-    border-radius: 22px;
-    border 3px solid #FFFFFF;
-`;
-
-export const PostInfo = styled.div`
-  margin-bottom: 12px;
-
-  h4 {
-    font-family: "Open Sans";
-    front-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-    color: #ffffff;
-  }
-
-  p {
-    font-family: "Open Sans";
-    front-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #ffffff;
-  }
-`;
-
-export const HasInfo = styled.div`
-  margin-bottom: 12px;
-
-  h4 {
-    font-family: "Open Sans";
-    front-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    color: #ffffff80;
-  }
-
-  p {
-    font-family: "Open Sans";
-    front-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-  }
-`;
-
-export const TitleContainer = styled.div`
-  width: 100%;
-  display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  padding: 24px 0 24px 20px;
   align-items: center;
 `;
 
-export const TitleText = styled.p`
-  font: normal normal normal 12px/16px PT Sans;
+export const CharacterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 50%;
-  color: #8e8e8e;
+  gap: 1.5rem;
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  p {
+    display: flex;
+    text-align: left;
+    font: normal normal bold 16px/22px PT Sans;
+    letter-spacing: 0px;
+    color: #555555;
+    opacity: 1;
+
+    margin: auto 0;
+  }
+`;
+
+export const SeriesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  p {
+    text-align: left;
+    font: normal normal normal 14px/16px PT Sans;
+    letter-spacing: 0px;
+    color: #555555;
+    opacity: 1;
+  }
+`;
+
+export const EventsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  p {
+    text-align: left;
+    font: normal normal normal 14px/16px PT Sans;
+    letter-spacing: 0px;
+    color: #555555;
+    opacity: 1;
+  }
 `;
