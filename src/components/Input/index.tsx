@@ -8,7 +8,7 @@ import {
 } from "./styles";
 import { FaSearch } from "react-icons/fa";
 
-const Input = () => {
+const Input: React.FC = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e: any) => {

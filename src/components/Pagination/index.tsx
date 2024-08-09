@@ -2,7 +2,11 @@ import React from "react";
 import { PaginationContainer, PageNumber, NavButton } from "./styles";
 import { IPagination } from "./types";
 
-const Pagination = ({ currentPage, totalPages, onPageChange }: IPagination) => {
+const Pagination: React.FC<IPagination> = ({
+  currentPage,
+  totalPages,
+  onPageChange,
+}) => {
   const pageNumbers = [];
 
   const maxPageNumbersToShow = 5;

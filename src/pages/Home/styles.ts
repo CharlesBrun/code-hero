@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Container = styled.main`
   width: 100%;
   max-width: 78%;
-  margin: 0 auto;
-  margin-top: 2.5rem;
-  min-height: calc(75vh + 1rem);
+  margin: 2.5rem auto;
+  min-height: calc(73vh + 0.2rem);
 `;
 
 export const Row = styled.div`
@@ -25,7 +24,7 @@ export const Title = styled.h2`
 `;
 
 export const Footer = styled.footer`
-  height: 30vh;
+  height: 10vh;
   background-color: #ffffff;
   text-align: center;
   padding: 10px;

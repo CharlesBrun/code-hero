@@ -12,7 +12,7 @@ import {
   ContainerTexts,
 } from "./styles";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Wrapper>
       <Container>
@@ -22,7 +22,7 @@ const Header = () => {
 
         <Row>
           {/* <ContainerTexts> */}
-          <UserName>Nome do candidato</UserName>
+          <UserName>Charles Viegas</UserName>
           <UserObjective> Teste de Front-end </UserObjective>
           {/* </ContainerTexts> */}
           <UserPicture>

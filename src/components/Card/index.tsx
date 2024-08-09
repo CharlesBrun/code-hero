@@ -7,25 +7,26 @@ import {
   SeriesContainer,
 } from "./styles";
 
-import personagem from "../../assets/photo@2x.png";
+import { ICharacter } from "../../interfaces/character";
 
-const Card = () => {
+const Card: React.FC<{ character: ICharacter }> = ({ character }) => {
+  const imageUrl = `${character.thumbnail.path}.${character.thumbnail.extension}`;
   return (
     <CardContainer>
       <Content>
         <CharacterContainer>
-          <img src={personagem} alt="personagem" />
-          <p>Abner Jenkins</p>
+          <img src={imageUrl} alt="personagem" />
+          <p>{character.name}</p>
         </CharacterContainer>
         <SeriesContainer>
-          <p>Iron Man: Armor Wars</p>
-          <p>Old Man Hawkeye</p>
-          <p>Fantastic Four Visionaries: Walter Simonson Vol. 1</p>
+          {character.series.items.map((serie, index) => (
+            <p key={index}>{serie.name}</p>
+          ))}
         </SeriesContainer>
         <EventsContainer>
-          <p>AvX</p>
-          <p>Demon in the Bottle</p>
-          <p>Dynasty M</p>
+          {character.comics.items.map((comic, index) => (
+            <p key={index}>{comic.name}</p>
+          ))}
         </EventsContainer>
       </Content>
     </CardContainer>
