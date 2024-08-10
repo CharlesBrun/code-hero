@@ -9,8 +9,18 @@ import {
 } from "./styles";
 
 import { ICharacter } from "../../interfaces/character";
+import { useCharacters } from "../../context/Character";
+import { useNavigate } from "react-router-dom";
 
 const Card: React.FC<{ character: ICharacter }> = ({ character }) => {
+  const { setCharacter } = useCharacters();
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    setCharacter(character);
+    navigate("/detalhes");
+  };
+
   const imageUrl = `${character.thumbnail.path}.${character.thumbnail.extension}`;
 
   const seriesToShow = character.series.items.slice(0, 3);
@@ -20,7 +30,7 @@ const Card: React.FC<{ character: ICharacter }> = ({ character }) => {
   const hasMoreEvents = character.comics.items.length > 3;
 
   return (
-    <CardContainer>
+    <CardContainer onClick={handleCardClick}>
       <Content>
         <CharacterContainer>
           <img src={imageUrl} alt="personagem" />

@@ -9,7 +9,8 @@ import { api } from "../services/api";
 import { ICharacter } from "../interfaces/character";
 import { isAxiosError } from "axios";
 
-interface CharacterContextData {
+interface ICharacterContextData {
+  character: ICharacter;
   characters: ICharacter[];
   totalPages: number;
   currentPage: number;
@@ -18,15 +19,17 @@ interface CharacterContextData {
   setSearchName: React.Dispatch<React.SetStateAction<string>>;
   handlePageChange: (page: number) => void;
   handleSearchNameChange: () => void;
+  setCharacter: React.Dispatch<React.SetStateAction<ICharacter>>;
 }
 
-const CharacterContext = createContext<CharacterContextData | undefined>(
-  undefined
+const CharacterContext = createContext<ICharacterContextData>(
+  {} as ICharacterContextData
 );
 
 export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const [character, setCharacter] = useState<ICharacter>({} as ICharacter);
   const [characters, setCharacters] = useState<ICharacter[]>([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
@@ -108,6 +111,7 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({
   return (
     <CharacterContext.Provider
       value={{
+        character,
         characters,
         totalPages,
         currentPage,
@@ -116,6 +120,7 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({
         setSearchName,
         handlePageChange,
         handleSearchNameChange,
+        setCharacter,
       }}
     >
       {children}
