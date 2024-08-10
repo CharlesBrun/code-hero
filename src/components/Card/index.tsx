@@ -33,7 +33,7 @@ const Card: React.FC<{ character: ICharacter }> = ({ character }) => {
     <CardContainer onClick={handleCardClick}>
       <Content>
         <CharacterContainer>
-          <img src={imageUrl} alt="personagem" />
+          <img src={imageUrl} alt={character.name} />
           <p>{character.name}</p>
         </CharacterContainer>
         <SeriesContainer>
