@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Marvel Characters Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project allows users to search and view details about Marvel characters. The application uses the Marvel API to retrieve data on characters, comics, series, stories, and events.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static typing.
+- **Styled Components**: Library for styling React components using CSS-in-JS.
+- **Yarn**: Package manager for the project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Character Search**: Allows searching for Marvel characters by name.
+- **Detail Display**: Shows details of the selected character, including comics, series, stories, and events.
+- **Pagination**: Navigate through search results using pagination.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To install the project dependencies, use Yarn. Run the following command at the root of the project:
 
-### `npm run build`
+```bash
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Script
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Start the Application**: To start the application, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn start
+```
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **`src/`**: Contains the source of the application.
+  - **`components/`**: Components of the application.
+  - **`pages/`**: Pages of the application.
+  - **`context/`**: Contexts for state management.
+  - **`services/`**: Services for API calls.
+  - **`styles/`**: Global styles and themes.
+  - **`interfaces/`**: TypeScript types and interfaces.
+- **`public/`**: Static files and the basic HTML structure.
+- **`package.json`**: Project configuration and scripts.
+- **`tsconfig.json`**: TypeScript configuration.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<hr>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Projeto Personagens da Marvel
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Descrição
 
-## Learn More
+Este projeto permite buscar e visualizar detalhes sobre personagens da Marvel. A aplicação utiliza a API da Marvel para obter dados sobre personagens, quadrinhos, séries, histórias e eventos.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tecnologias Utilizadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Styled Components**: Biblioteca para estilização de componentes React utilizando CSS-in-JS.
+- **Yarn**: Gerenciador de pacotes para o projeto.
 
-### Code Splitting
+## Funcionalidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Busca de Personagens**: Permite buscar personagens da Marvel por nome.
+- **Exibição de Detalhes**: Mostra detalhes do personagem selecionado, incluindo quadrinhos, séries, histórias e eventos.
+- **Paginação**: Navegue pelos resultados da busca utilizando paginação.
 
-### Analyzing the Bundle Size
+## Instalação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Para instalar as dependências do projeto, utilize o Yarn. Execute o seguinte comando na raiz do projeto:
 
-### Making a Progressive Web App
+```bash
+yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Script
 
-### Advanced Configuration
+- **Iniciar a Aplicação**: Para iniciar a aplicação, execute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+yarn start
+```
 
-### Deployment
+## Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **`src/`**: Contém o código-fonte da aplicação.
+  - **`components/`**: Componentes reutilizáveis da aplicação.
+  - **`pages/`**: Páginas da aplicação.
+  - **`context/`**: Contextos React para gerenciamento de estado.
+  - **`services/`**: Serviços para chamadas à API.
+  - **`styles/`**: Estilos globais e temas.
+  - **`interfaces/`**: Tipos e interfaces TypeScript.
+- **`public/`**: Arquivos estáticos e a estrutura básica do HTML.
+- **`package.json`**: Configuração do projeto e scripts.
+- **`tsconfig.json`**: Configuração do TypeScript.
