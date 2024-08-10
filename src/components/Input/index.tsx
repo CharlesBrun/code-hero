@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Container,
   IconContainer,
@@ -8,27 +8,28 @@ import {
 } from "./styles";
 import { FaSearch } from "react-icons/fa";
 
-const Input: React.FC = () => {
-  const [inputValue, setInputValue] = useState("");
+interface InputProps {
+  searchName: string;
+  onSearchNameChange: () => void;
+  setSearchName: React.Dispatch<React.SetStateAction<string>>;
+}
 
-  const handleInputChange = (e: any) => {
-    setInputValue(e.target.value);
-  };
-  const handleIconClick = () => {
-    console.log("Valor do input:", inputValue);
-  };
-
+const Input: React.FC<InputProps> = ({
+  searchName,
+  onSearchNameChange,
+  setSearchName,
+}) => {
   return (
     <Container>
       <Title>Nome do personagem</Title>
       <InputContainer>
         <InputText
           placeholder="Search"
-          value={inputValue}
-          onChange={handleInputChange}
+          value={searchName}
+          onChange={(e) => setSearchName(e.target.value)}
         />
         <IconContainer>
-          <FaSearch onClick={handleIconClick} />
+          <FaSearch onClick={onSearchNameChange} />
         </IconContainer>
       </InputContainer>
     </Container>

@@ -25,6 +25,7 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const resultsPerPage = 10;
   const controllerRef = useRef<AbortController | null>(null);
+  const [searchName, setSearchName] = useState("");
 
   const handlePageChange = (pageNumber: number) => {
     if (pageNumber === currentPage) {
@@ -47,6 +48,7 @@ function Home() {
       setLoading(true);
       const res = await api.get("/characters", {
         params: {
+          nameStartsWith: searchName === "" ? null : searchName,
           limit: resultsPerPage,
           offset: (page - 1) * resultsPerPage,
           apikey: "06909ef0c4881444b17a26b4d6326902",
@@ -67,6 +69,11 @@ function Home() {
     }
   };
 
+  const handleSearchNameChange = () => {
+    setCurrentPage(1);
+    handleListData(1);
+  };
+
   useEffect(() => {
     if (!hasFetched.current) {
       handleListData();
@@ -80,7 +87,11 @@ function Home() {
       <Container>
         <Row>
           <Title>Busca de personagens</Title>
-          <Input />
+          <Input
+            searchName={searchName}
+            onSearchNameChange={handleSearchNameChange}
+            setSearchName={setSearchName}
+          />
           <TitleContainer>
             <TitleText hide={"block"}>Personagem</TitleText>
             <TitleText hide={"none"}>Séries</TitleText>
