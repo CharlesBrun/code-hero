@@ -23,6 +23,11 @@ export const Content = styled.div`
   flex-direction: row;
   padding: 24px 12px 24px 20px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 0.9rem 0 0.9rem 0.9rem;
+    margin: 0;
+  }
 `;
 
 export const CharacterContainer = styled.div`
@@ -62,6 +67,10 @@ export const SeriesContainer = styled.div`
     color: #555555;
     opacity: 1;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const EventsContainer = styled.div`
@@ -75,6 +84,10 @@ export const EventsContainer = styled.div`
     letter-spacing: 0px;
     color: #555555;
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 

@@ -82,9 +82,9 @@ function Home() {
           <Title>Busca de personagens</Title>
           <Input />
           <TitleContainer>
-            <TitleText>Personagem</TitleText>
-            <TitleText>Séries</TitleText>
-            <TitleText>Eventos</TitleText>
+            <TitleText hide={"block"}>Personagem</TitleText>
+            <TitleText hide={"none"}>Séries</TitleText>
+            <TitleText hide={"none"}>Eventos</TitleText>
           </TitleContainer>
           <CardContainer>
             {loading ? (

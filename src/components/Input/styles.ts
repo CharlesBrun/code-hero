@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -16,6 +20,12 @@ export const InputContainer = styled.div`
   border-radius: 4px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 295px;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -47,4 +57,8 @@ export const Title = styled.h3`
   font: normal normal bold 16px/24px PT Sans Caption;
   letter-spacing: 0px;
   color: #555555;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;

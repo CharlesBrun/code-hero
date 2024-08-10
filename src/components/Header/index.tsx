@@ -21,10 +21,10 @@ const Header: React.FC = () => {
         </StyledLink>
 
         <Row>
-          {/* <ContainerTexts> */}
-          <UserName>Charles Viegas</UserName>
-          <UserObjective> Teste de Front-end </UserObjective>
-          {/* </ContainerTexts> */}
+          <ContainerTexts>
+            <UserName>Charles Viegas</UserName>
+            <UserObjective> Teste de Front-end </UserObjective>
+          </ContainerTexts>
           <UserPicture>
             <p>CB</p>
           </UserPicture>

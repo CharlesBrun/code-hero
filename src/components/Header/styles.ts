@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 95%;
+  max-width: 90%;
   height: 64px;
 
   display: flex;
@@ -17,6 +17,10 @@ export const Row = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 440px) {
+    gap: 16px;
+  }
 `;
 
 export const Column = styled.div`
@@ -40,6 +44,11 @@ export const ContainerTexts = styled.div`
   align-itens: center;
   gap: 0.3rem;
   margin-right: auto;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    text-align: right;
+  }
 `;
 
 export const UserName = styled.p`
@@ -97,19 +106,9 @@ export const UserPicture = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  width: 20vw;
+  width: 30vw;
   max-width: 120px;
   min-width: 60px;
 
   height: auto;
-
-  @media (max-width: 768px) {
-    width: 15vw;
-    max-width: 80px;
-  }
-
-  @media (max-width: 480px) {
-    width: 10vw;
-    max-width: 60px;
-  }
 `;

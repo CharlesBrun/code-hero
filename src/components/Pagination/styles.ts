@@ -9,8 +9,8 @@ export const PaginationContainer = styled.div`
 `;
 
 export const PageNumber = styled.button<IPageNumber>`
-  margin: 0 8px;
-  padding: 10px 20px;
+  margin: 0 6px;
+  padding: 8px 18px;
   border: ${(props) =>
     props.className === "active" ? "1px solid #167abc;" : "1px solid #E5E5E5;"};
   background-color: ${(props) =>
@@ -26,10 +26,14 @@ export const PageNumber = styled.button<IPageNumber>`
   transition: transform 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${(props) =>
-      props.className === "active" ? "#167ABC90" : "#F5F5F590"};
-
+    background-color: #167abc90;
+    color: #ffffff;
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 4px;
+    padding: 5px 10px;
   }
 `;
 
@@ -45,7 +49,12 @@ export const NavButton = styled.button`
   transition: transform 0.2s ease-in-out;
 
   &:hover {
-    background-color: #e5e5e560;
+    color: #167abc90;
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 4px;
+    padding: 4px 4px;
   }
 `;

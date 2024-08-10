@@ -9,7 +9,7 @@ const Pagination: React.FC<IPagination> = ({
 }) => {
   const pageNumbers = [];
 
-  const maxPageNumbersToShow = 5;
+  const maxPageNumbersToShow = window.innerWidth < 768 ? 3 : 5; //Identifica o tamanho da tela assim que abrir a aplicação e set a quantidade maxima de paginas.
   const halfPageNumbersToShow = Math.floor(maxPageNumbersToShow / 2);
 
   let startPage = Math.max(1, currentPage - halfPageNumbersToShow);
