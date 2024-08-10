@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import { AuthContextProvider } from "./context/auth";
+import { CharacterProvider } from "./context/Character";
 
 function App() {
   return (
     <React.StrictMode>
       <Router>
-        <AuthContextProvider>
+        <CharacterProvider>
           <Routes>
             <Route path={"/"} element={<Home />} />
           </Routes>
-        </AuthContextProvider>
+        </CharacterProvider>
       </Router>
     </React.StrictMode>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import {
   CardContainer,
@@ -12,74 +12,21 @@ import {
 import Input from "../../components/Input";
 import Card from "../../components/Card";
 import Pagination from "../../components/Pagination";
-import { api } from "../../services/api";
 import Loader from "../../components/Loading";
 import { ICharacter } from "../../interfaces/character";
-import { isAxiosError } from "axios";
+import { useCharacters } from "../../context/Character";
 
 function Home() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-  const [characters, setCharacters] = useState<ICharacter[]>([]);
-  const hasFetched = useRef(false);
-  const [loading, setLoading] = useState(false);
-  const resultsPerPage = 10;
-  const controllerRef = useRef<AbortController | null>(null);
-  const [searchName, setSearchName] = useState("");
-
-  const handlePageChange = (pageNumber: number) => {
-    if (pageNumber === currentPage) {
-      return;
-    }
-
-    setCurrentPage(pageNumber);
-    handleListData(pageNumber);
-  };
-
-  const handleListData = async (page = 1) => {
-    if (controllerRef.current) {
-      controllerRef.current.abort();
-    }
-
-    const controller = new AbortController();
-    controllerRef.current = controller;
-
-    try {
-      setLoading(true);
-      const res = await api.get("/characters", {
-        params: {
-          nameStartsWith: searchName === "" ? null : searchName,
-          limit: resultsPerPage,
-          offset: (page - 1) * resultsPerPage,
-          apikey: "06909ef0c4881444b17a26b4d6326902",
-          hash: "69b9b206213e0de4ed860f527e285417",
-          ts: "1",
-        },
-        signal: controller.signal,
-      });
-
-      const { results, total } = res.data.data;
-      setTotalPages(Math.ceil(total / resultsPerPage));
-      setCharacters(results);
-      setLoading(false);
-    } catch (error) {
-      if (isAxiosError(error) && error.code !== "ERR_CANCELED") {
-        console.error("Erro ao buscar personagens:", error);
-      }
-    }
-  };
-
-  const handleSearchNameChange = () => {
-    setCurrentPage(1);
-    handleListData(1);
-  };
-
-  useEffect(() => {
-    if (!hasFetched.current) {
-      handleListData();
-      hasFetched.current = true;
-    }
-  }, []);
+  const {
+    characters,
+    totalPages,
+    currentPage,
+    searchName,
+    loading,
+    setSearchName,
+    handlePageChange,
+    handleSearchNameChange,
+  } = useCharacters();
 
   return (
     <>
@@ -89,7 +36,7 @@ function Home() {
           <Title>Busca de personagens</Title>
           <Input
             searchName={searchName}
-            onSearchNameChange={handleSearchNameChange}
+            handleSearchNameChange={handleSearchNameChange}
             setSearchName={setSearchName}
           />
           <TitleContainer>

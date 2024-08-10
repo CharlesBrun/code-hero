@@ -10,13 +10,13 @@ import { FaSearch } from "react-icons/fa";
 
 interface InputProps {
   searchName: string;
-  onSearchNameChange: () => void;
+  handleSearchNameChange: () => void;
   setSearchName: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Input: React.FC<InputProps> = ({
   searchName,
-  onSearchNameChange,
+  handleSearchNameChange,
   setSearchName,
 }) => {
   return (
@@ -29,7 +29,7 @@ const Input: React.FC<InputProps> = ({
           onChange={(e) => setSearchName(e.target.value)}
         />
         <IconContainer>
-          <FaSearch onClick={onSearchNameChange} />
+          <FaSearch onClick={handleSearchNameChange} />
         </IconContainer>
       </InputContainer>
     </Container>
